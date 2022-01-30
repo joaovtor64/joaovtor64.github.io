@@ -1,0 +1,346 @@
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #393939;
+		}
+
+		:focus {
+			border: none;
+			outline: none;
+			border-left: solid 4px #FF00C7;
+		}
+
+		@keyframes pathitemintro {
+			0% {
+				transform: rotateX(90deg);
+			}
+		}
+
+		* {
+			transition: all 250ms cubic-bezier(1, .03, 0, .99);
+			color: white;
+			font-family: "Fira Code";
+		}
+
+		.header {
+			width: 100%;
+			height: max(7.5vh, 30px);
+			background: linear-gradient(270deg, #FF7A00 0%, #FF00C7 100%);
+			display: flex;
+			user-select: none;
+			-webkit-user-select: none;
+
+		}
+
+		.header::selection {
+			background-color: #FF00C7;
+		}
+
+		.path {
+			flex-grow: 2;
+			display: flex;
+			border-right: 4px solid white;
+			border-left: 4px solid white;
+			scroll-behavior: smooth;
+			overflow-x: auto;
+			padding: 2px
+		}
+
+		.pathitem {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			cursor: pointer;
+			animation: pathitemintro 250ms cubic-bezier(1, .03, 0, .99);
+
+		}
+
+		.pathitem:hover {
+			background: #232323;
+		}
+
+		.pathitemtext {
+			font-size: max(4vh, 16px);
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+
+
+
+		.cont1 {
+			width: 100%;
+			height: min(92.5vh, calc(100vh - 30px));
+			display: flex;
+			flex-direction: row;
+
+			transition: all cubic-bezier(1, .03, 0, .99) 1s;
+		}
+
+
+
+
+
+		.view .empty {
+			justify-content: center;
+			align-items: center;
+		}
+
+		.itemicon {
+			aspect-ratio: 1/1;
+			width: 14vmin;
+			margin: auto;
+		}
+
+
+
+		.item {
+			width: 20vmin;
+			display: flex;
+			flex-direction: column;
+			height: 25vmin;
+			cursor: pointer;
+		}
+
+		.item:hover {
+			border-bottom: 5px solid #FF00C7;
+		}
+
+		.itemname {
+			color: white;
+			font-family: "Fira Code";
+			text-align: center;
+			width: 100%;
+			overflow-wrap: break-word;
+			height: 3em;
+			overflow: hidden;
+			font-size: 3vmin;
+		}
+
+		.info {
+
+			width: min(max(20vw, 240px), 200px);
+			height: 100%;
+			flex-grow: 1;
+			background-color: #262626;
+			display: flex;
+			justify-content: center;
+			padding-top: 0.5em;
+			box-sizing: border-box;
+		}
+
+		/*Assuming desktop*/
+		.view {
+			width: min(80vw, 960px);
+			overflow: auto;
+			flex-grow: 1;
+			flex-wrap: wrap;
+
+			display: flex;
+			height: 100%;
+			box-sizing: border-box;
+		}
+
+		.icon {
+			width: max(7vh, 31px)
+		}
+
+		.username {
+			font-family: Fira Code;
+			font-style: normal;
+			font-weight: 450;
+			font-size: max(8vh, 32px);
+			line-height: max(7vh, 30px);
+			color: white;
+
+		}
+
+
+
+		.hid {
+			display: none !important;
+		}
+
+		.add {
+			user-select: none;
+			width: 90%;
+			height: 30%;
+			border: solid 4px #393939;
+			display: flex;
+			box-sizing: border-box;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+
+		}
+
+		.add:hover {
+			border-bottom: 5px solid #FF00C7;
+		}
+
+		.add>* {
+			flex: 1 1 100%;
+
+		}
+
+		.new {
+			background-color: #232323;
+			text-align: center;
+			width: 100%;
+			height: 1vmin;
+			font-size: 3vmin;
+
+		}
+
+		.newbtn {
+			aspect-ratio: 1/1;
+			max-width: 40%;
+			flex-grow: 0;
+			height: 65%;
+			flex-shrink: 1;
+			flex-basis: 40%;
+			cursor: pointer;
+
+		}
+
+		.newbtn:hover {
+			border-bottom: 5px solid #FF00C7;
+		}
+
+
+
+
+
+		::selection {
+			background-color: #FF7A00;
+		}
+
+		/*Right from w3schools*/
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+
+		.blur {
+			filter: blur(5px);
+			-webkit-filter: blur(5px);
+		}
+
+		.namepopup {
+			z-index: 10;
+			position: absolute;
+			background: linear-gradient(270deg, rgba(255, 122, 0, 0.3) 0%, rgba(255, 0, 199, 0.3) 100%);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			height: 100%;
+		}
+
+
+		.nameinput {
+			background: none;
+			border: none;
+			outline: none;
+			font-size: 5vmax;
+			font-weight: 900;
+			font-family: "PT mono";
+			text-align: center;
+			/*There was an attempt*/
+			flex: 1 1 980px;
+			width: fit-content
+		}
+
+		.nameinput:focus,
+		.nameinput:hover {
+			border-bottom: solid 3px white;
+		}
+
+		.create {
+
+
+			border: solid 5px #FF7A00;
+
+		}
+
+		.create,
+		.cancel {
+			text-align: center;
+			width: auto;
+			padding: 0.1rem;
+			margin: 0.4em;
+			height: 100%;
+			line-height: 100%;
+			border-radius: 10px;
+			justify-content: center;
+			place-items: center;
+			display: flex;
+			flex: 1 1 40%;
+			cursor: pointer;
+		}
+
+		.create:hover {
+			background-color: #FF7A00;
+		}
+
+		.cancel {
+
+
+			border: solid 5px #555;
+
+
+		}
+
+		.cancel:hover {
+			background-color: #555;
+		}
+
+		.namecont {
+			display: flex;
+			height: 5vmax;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width:700px) {
+			.view {
+				height: 70%;
+				width: 100%;
+			}
+
+			.info {
+				height: 30%;
+				width: 100%;
+				justify-content: left;
+				align-items: center;
+				box-sizing: border-box;
+				padding-left: 8px;
+			}
+
+
+
+			.add {
+				height: 90%;
+				width: 150px
+			}
+
+			.cont1 {
+				flex-direction: column;
+			}
+		}
