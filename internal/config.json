@@ -1,7 +1,7 @@
 {
 	"comms": {
 		"port": 4096,
-		"location": "localhost"
+		"location": "192.168.0.11"
 	},
 	"webserver": {
 		"protocol": "ws://",
